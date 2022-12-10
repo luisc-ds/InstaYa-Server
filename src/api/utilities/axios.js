@@ -59,6 +59,7 @@ base.interceptors.request.use((config) => {
 base.interceptors.response.use(
 	(res) => res,
 	async (error) => {
+		console.log(error)
 		let requestMade = { ...error.config, ...sharedConfig };
 		if (error.response.status === 401 && !requestMade._retry) {
 			requestMade._retry = true;

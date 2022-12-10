@@ -6,6 +6,7 @@ import { Logo } from '../../components/Logo';
 
 export async function action({ request }) {
 	try {
+		console.log(request)
 		const response = await doRequest({
 			request,
 			keys: signInFields,
